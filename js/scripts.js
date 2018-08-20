@@ -17,6 +17,13 @@ Contact.prototype.fullName = function() {
   return this.lastName + ", " + this.firstName;
 }
 
+function resetInputs() {
+$("input#new-first-name").val("");
+$("input#new-last-name").val("");
+$("input#new-street").val("");
+$("input#new-city").val("");
+$("input#new-state").val("");
+}
 
 // user interface logic
 $(document).ready(function() {
@@ -73,11 +80,10 @@ $(document).ready(function() {
     })
 
 
-    // $("input#new-first-name").val("");
-    // $("input#new-last-name").val("");
-    // $("input#new-street").val("");
-    // $("input#new-city").val("");
-    // $("input#new-state").val("");
+
     });
+
+resetInputs();
+
   });
 });
